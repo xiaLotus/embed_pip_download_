@@ -5,6 +5,8 @@ class download_picture:
         self.dateStart = dateStart
 
     def call_step(self):
+        if self.step == "":
+            return
         print(self.step)
     
     def call_stage(self):
@@ -17,7 +19,8 @@ class download_picture:
 if __name__ == "__main__":
     class_handles = [
         download_picture("330", "100", "20200325"), 
-        download_picture("11", "300", "20200326")
+        download_picture("11", "300", "20200326"),
+        download_picture("", "300", "20200326")
     ]
     # de_handles = [obj.call_step() for obj in class_handles]
     for i in range(len(class_handles)):
